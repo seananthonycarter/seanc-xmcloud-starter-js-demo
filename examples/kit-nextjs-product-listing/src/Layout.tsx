@@ -69,6 +69,16 @@ interface RouteFields {
   thumbnailImage?: ImageField;
 }
 
+const formOverrideStyles = `
+    .limit-counter {
+        display:none !important;
+    }
+    .form-field-required{
+        display:none !important;
+    }
+`
+
+
 const Layout = ({ page }: LayoutProps): JSX.Element => {
   const { layout } = page;
   const { route } = layout.sitecore;
@@ -108,6 +118,7 @@ const Layout = ({ page }: LayoutProps): JSX.Element => {
         {ogTitle && <meta property="og:title" content={ogTitle} />}
         {ogDescription && <meta property="og:description " content={ogDescription} />}
         {ogImage && <meta property="og:image " content={ogImage} />}
+        <style>{formOverrideStyles}</style>
       </Head>
       <VideoProvider>
         {/* root placeholder for the app, which we add components to using route data */}
