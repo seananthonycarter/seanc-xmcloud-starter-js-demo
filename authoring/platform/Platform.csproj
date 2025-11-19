@@ -72,7 +72,7 @@
     <None Include="web.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Config\Include\zzz\Custom.Publishing.Settings.config" />
+    <Content Include="App_Config\Include\zzz\Custom.Publishing.Settings.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
